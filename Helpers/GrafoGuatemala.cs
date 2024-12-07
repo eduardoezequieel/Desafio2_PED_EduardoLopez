@@ -11,7 +11,7 @@ namespace Desafio2_PED_EduardoLopez.Helpers
             Guatemala = new Grafo<string>();
 
             // Definición de los vértices
-            Vertice<string> CiudadGuatemala = new Vertice<string>("Ciudad de Guatemala", 0, 0);
+            Vertice<string> CiudadGuatemala = new Vertice<string>("Ciudad de Guatemala", 402, 369);
             Vertice<string> Antigua = new Vertice<string>("Antigua", 0, 0);
             Vertice<string> Quetzaltenango = new Vertice<string>("Quetzaltenango", 0, 0);
             Vertice<string> Escuintla = new Vertice<string>("Escuintla", 0, 0);

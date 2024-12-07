@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnDeleteAristas = new Button();
             groupBox3 = new GroupBox();
             cbType = new ComboBox();
             groupBox2 = new GroupBox();
@@ -38,16 +39,19 @@
             btnContinue = new Button();
             btnMinimize = new Button();
             btnExit = new Button();
-            countryPanel = new Panel();
+            countryPanel = new PictureBox();
+            button1 = new Button();
             panel1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)countryPanel).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(21, 21, 21);
+            panel1.Controls.Add(btnDeleteAristas);
             panel1.Controls.Add(groupBox3);
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(groupBox1);
@@ -56,6 +60,21 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1220, 93);
             panel1.TabIndex = 1;
+            // 
+            // btnDeleteAristas
+            // 
+            btnDeleteAristas.BackColor = Color.FromArgb(255, 128, 128);
+            btnDeleteAristas.FlatAppearance.BorderSize = 0;
+            btnDeleteAristas.FlatStyle = FlatStyle.Flat;
+            btnDeleteAristas.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnDeleteAristas.ForeColor = Color.White;
+            btnDeleteAristas.Location = new Point(860, 21);
+            btnDeleteAristas.Name = "btnDeleteAristas";
+            btnDeleteAristas.Size = new Size(190, 57);
+            btnDeleteAristas.TabIndex = 8;
+            btnDeleteAristas.Text = "Eliminar conexiones";
+            btnDeleteAristas.UseVisualStyleBackColor = false;
+            btnDeleteAristas.Click += btnDeleteAristas_Click;
             // 
             // groupBox3
             // 
@@ -145,6 +164,7 @@
             btnContinue.TabIndex = 3;
             btnContinue.Text = "Continuar";
             btnContinue.UseVisualStyleBackColor = false;
+            btnContinue.Click += btnContinue_Click;
             // 
             // btnMinimize
             // 
@@ -177,10 +197,26 @@
             // countryPanel
             // 
             countryPanel.BackColor = Color.FromArgb(21, 21, 21);
-            countryPanel.Location = new Point(14, 121);
+            countryPanel.Location = new Point(13, 122);
             countryPanel.Name = "countryPanel";
             countryPanel.Size = new Size(1324, 592);
-            countryPanel.TabIndex = 2;
+            countryPanel.TabIndex = 5;
+            countryPanel.TabStop = false;
+            countryPanel.Paint += countryPanel_Paint;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 187, 132);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(421, 246);
+            button1.Name = "button1";
+            button1.Size = new Size(143, 45);
+            button1.TabIndex = 9;
+            button1.Text = "Continuar";
+            button1.UseVisualStyleBackColor = false;
             // 
             // DashboardView
             // 
@@ -188,6 +224,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(1350, 729);
+            Controls.Add(button1);
             Controls.Add(countryPanel);
             Controls.Add(btnMinimize);
             Controls.Add(btnExit);
@@ -200,6 +237,7 @@
             groupBox3.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)countryPanel).EndInit();
             ResumeLayout(false);
         }
 
@@ -209,12 +247,14 @@
         private Button btnContinue;
         private Button btnMinimize;
         private Button btnExit;
-        private Panel countryPanel;
         private GroupBox groupBox1;
         private ComboBox countryCb;
         private GroupBox groupBox3;
         private ComboBox cbType;
         private GroupBox groupBox2;
         private ComboBox cityCb;
+        private PictureBox countryPanel;
+        private Button btnDeleteAristas;
+        private Button button1;
     }
 }

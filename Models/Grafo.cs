@@ -17,6 +17,7 @@
         public void AgregarArista(Vertice<T> origen, Vertice<T> destino, double distancia)
         {
             origen.Aristas.Add(new Arista<T>(destino, distancia));
+            destino.Aristas.Add(new Arista<T>(origen, distancia));
         }
     }
 }
