@@ -1,3 +1,5 @@
+using Desafio2_PED_EduardoLopez.Views;
+
 namespace Desafio2_PED_EduardoLopez
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Desafio2_PED_EduardoLopez
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new DashboardView());
         }
     }
 }
