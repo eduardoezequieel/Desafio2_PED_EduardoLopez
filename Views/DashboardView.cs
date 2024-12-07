@@ -9,6 +9,8 @@ namespace Desafio2_PED_EduardoLopez.Views
         private List<string> Recorridos = new List<string> { "Anchura", "Profundidad" };
         private GrafoElSalvador GrafoElSalvador = new GrafoElSalvador();
         private GrafoGuatemala GrafoGuatemala = new GrafoGuatemala();
+        private GrafoHonduras GrafoHonduras = new GrafoHonduras();
+        private GrafoCostaRica GrafoCostaRica = new GrafoCostaRica();
         private Vertice<string>? verticeOrigen = null;
         private Grafo<string> PaisSeleccionado;
         int buttonWidth = 143;
@@ -107,6 +109,10 @@ namespace Desafio2_PED_EduardoLopez.Views
                 this.PaisSeleccionado = GrafoElSalvador.ElSalvador;
             else if (selectedCountry == "Guatemala")
                 this.PaisSeleccionado = GrafoGuatemala.Guatemala;
+            else if (selectedCountry == "Honduras")
+                this.PaisSeleccionado = GrafoHonduras.Honduras;
+            else if (selectedCountry == "Costa Rica")
+                this.PaisSeleccionado = GrafoCostaRica.CostaRica;
 
             this.cityCb.ValueMember = "Valor";
             this.cityCb.DisplayMember = "Valor";
@@ -173,9 +179,10 @@ namespace Desafio2_PED_EduardoLopez.Views
 
                 await Task.Delay(1000);
                 this.drawAristas(this.countryPanel.CreateGraphics());
-            } else if (recorridoSeleccionado == "Profundidad")
+            }
+            else if (recorridoSeleccionado == "Profundidad")
             {
-                Profundidad profundidad =  new Profundidad();
+                Profundidad profundidad = new Profundidad();
                 await profundidad.Recorrer(this.PaisSeleccionado, verticeInicial, this.countryPanel, this.buttonWidth, this.buttonHeight);
                 await Task.Delay(1000);
                 this.drawAristas(this.countryPanel.CreateGraphics());

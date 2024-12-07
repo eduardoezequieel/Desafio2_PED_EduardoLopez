@@ -40,7 +40,6 @@
             btnMinimize = new Button();
             btnExit = new Button();
             countryPanel = new PictureBox();
-            button1 = new Button();
             panel1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -204,27 +203,12 @@
             countryPanel.TabStop = false;
             countryPanel.Paint += countryPanel_Paint;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(0, 187, 132);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(421, 246);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 45);
-            button1.TabIndex = 9;
-            button1.Text = "Continuar";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // DashboardView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(1350, 729);
-            Controls.Add(button1);
             Controls.Add(countryPanel);
             Controls.Add(btnMinimize);
             Controls.Add(btnExit);
@@ -255,6 +239,5 @@
         private ComboBox cityCb;
         private PictureBox countryPanel;
         private Button btnDeleteAristas;
-        private Button button1;
     }
 }
