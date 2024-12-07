@@ -9,6 +9,10 @@ public class Anchura
         {
             MessageBox.Show("Seleccione un vértice de inicio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
+        } else if (verticeInicial.Aristas.Count == 0)
+        {
+            MessageBox.Show("El vertice seleccionado no posee aristas.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
         int midWidth = buttonWidth / 2;
@@ -24,7 +28,6 @@ public class Anchura
         while (cola.Count > 0)
         {
             Vertice<string> verticeActual = cola.Dequeue();
-            Console.WriteLine(verticeActual.Valor);
 
             foreach (Arista<string> arista in verticeActual.Aristas)
             {

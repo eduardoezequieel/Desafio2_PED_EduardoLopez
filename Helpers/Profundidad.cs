@@ -11,6 +11,11 @@ namespace Desafio2_PED_EduardoLopez.Helpers
                 MessageBox.Show("Seleccione un vértice de inicio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            else if (verticeInicial.Aristas.Count == 0)
+            {
+                MessageBox.Show("El vertice seleccionado no posee aristas.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             int midWidth = buttonWidth / 2;
             int midHeight = buttonHeight / 2;
@@ -25,7 +30,6 @@ namespace Desafio2_PED_EduardoLopez.Helpers
             while (pila.Count > 0)
             {
                 Vertice<string> verticeActual = pila.Pop();
-                Console.WriteLine(verticeActual.Valor);
 
                 foreach (Arista<string> arista in verticeActual.Aristas)
                 {
