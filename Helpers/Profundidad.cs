@@ -4,7 +4,7 @@ namespace Desafio2_PED_EduardoLopez.Helpers
 {
     public class Profundidad
     {
-        public async Task Recorrer(Grafo<string> grafo, Vertice<string> verticeInicial, PictureBox pictureBox, int buttonWidth, int buttonHeight)
+        public async Task Recorrer(Grafo<string> grafo, Vertice<string> verticeInicial, Panel pictureBox, int buttonWidth, int buttonHeight)
         {
             if (verticeInicial == null)
             {
@@ -47,7 +47,7 @@ namespace Desafio2_PED_EduardoLopez.Helpers
                             Point destino = new Point(vecino.X + midWidth, vecino.Y + midHeight);
                             arista.Distancia = Math.Round(arista.Distancia, 2);
 
-                            graphics.DrawLine(new Pen(Color.AliceBlue, 2), origen, destino);
+                            graphics.DrawLine(new Pen(Color.Blue, 2), origen, destino);
                         }
                     }));
 

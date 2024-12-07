@@ -3,7 +3,7 @@
 namespace Desafio2_PED_EduardoLopez.Helpers;
 public class Anchura
 {
-    public async Task Recorrer(Grafo<string> grafo, Vertice<string> verticeInicial, PictureBox pictureBox, int buttonWidth, int buttonHeight)
+    public async Task Recorrer(Grafo<string> grafo, Vertice<string> verticeInicial, Panel pictureBox, int buttonWidth, int buttonHeight)
     {
         if (verticeInicial == null)
         {

@@ -39,13 +39,11 @@
             btnContinue = new Button();
             btnMinimize = new Button();
             btnExit = new Button();
-            countryPanel = new PictureBox();
-            button1 = new Button();
+            countryPanel = new Panel();
             panel1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)countryPanel).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -197,26 +195,11 @@
             // countryPanel
             // 
             countryPanel.BackColor = Color.FromArgb(21, 21, 21);
-            countryPanel.Location = new Point(13, 122);
+            countryPanel.Location = new Point(14, 118);
             countryPanel.Name = "countryPanel";
-            countryPanel.Size = new Size(1324, 592);
-            countryPanel.TabIndex = 5;
-            countryPanel.TabStop = false;
-            countryPanel.Paint += countryPanel_Paint;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(0, 187, 132);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(421, 246);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 45);
-            button1.TabIndex = 9;
-            button1.Text = "Continuar";
-            button1.UseVisualStyleBackColor = false;
+            countryPanel.Size = new Size(1324, 599);
+            countryPanel.TabIndex = 9;
+            countryPanel.Paint += countryPanel_Paint_1;
             // 
             // DashboardView
             // 
@@ -224,7 +207,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 15, 15);
             ClientSize = new Size(1350, 729);
-            Controls.Add(button1);
             Controls.Add(countryPanel);
             Controls.Add(btnMinimize);
             Controls.Add(btnExit);
@@ -237,7 +219,6 @@
             groupBox3.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)countryPanel).EndInit();
             ResumeLayout(false);
         }
 
@@ -253,8 +234,7 @@
         private ComboBox cbType;
         private GroupBox groupBox2;
         private ComboBox cityCb;
-        private PictureBox countryPanel;
         private Button btnDeleteAristas;
-        private Button button1;
+        private Panel countryPanel;
     }
 }
